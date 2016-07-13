@@ -47,21 +47,18 @@ style    | STROKE& FILL   | 圆环进度样式
 
 * 1.在XML中
 
-<root>
-       <io.netopen.hotbitmapgg.library.view.RingProgressBar
-           android:id="@+id/progress_bar"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_centerInParent="true"
-           app:max="100"
-           app:ringColor="@color/colorPrimary"
-           app:ringProgressColor="@color/colorPrimaryDark"
-           app:ringWidth="4dp"
-           app:style="STROKE"
-           app:textColor="@color/colorPrimary"
-           app:textIsShow="true"
-           app:textSize="16sp" />
-           </root>
+   android:id="@+id/progress_bar"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_centerInParent="true"
+   app:max="100"
+   app:ringColor="@color/colorPrimary"
+   app:ringProgressColor="@color/colorPrimaryDark"
+   app:ringWidth="4dp"
+   app:style="STROKE"
+   app:textColor="@color/colorPrimary"
+   app:textIsShow="true"
+   app:textSize="16sp"
 
 * 2.代码中
 
@@ -80,13 +77,14 @@ style    | STROKE& FILL   | 圆环进度样式
      }
   });
 
-  ## Other
-  * 知了日报客户端: https://github.com/HotBitmapGG/RxZhiHu
-  * 高仿BiliBili客户端: https://github.com/HotBitmapGG/OhMyBiliBili
-  * Gank.IO客户端: https://github.com/HotBitmapGG/StudyProject
-  * 妹子福利App: https://github.com/HotBitmapGG/MoeQuest
+## Other
 
-  ## License
+ * 知了日报客户端: https://github.com/HotBitmapGG/RxZhiHu
+ * 高仿BiliBili客户端: https://github.com/HotBitmapGG/OhMyBiliBili
+ * Gank.IO客户端: https://github.com/HotBitmapGG/StudyProject
+ * 妹子福利App: https://github.com/HotBitmapGG/MoeQuest
+
+## License
 
  Copyright 2016 HotBitmapGG
 
