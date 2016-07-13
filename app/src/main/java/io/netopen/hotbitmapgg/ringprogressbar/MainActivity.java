@@ -4,14 +4,15 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import io.netopen.hotbitmapgg.library.view.RingProgressBar;
 
 public class MainActivity extends AppCompatActivity
 {
 
-    private RingProgressBar mRingProgressBar;
+    private RingProgressBar mRingProgressBar1;
+
+    private RingProgressBar mRingProgressBar2;
 
     private int progress = 0;
 
@@ -24,18 +25,34 @@ public class MainActivity extends AppCompatActivity
 
             if (msg.what == 0)
             {
-                progress++;
-                mRingProgressBar.setProgress(progress);
-                mRingProgressBar.setOnProgressListener(new RingProgressBar.OnProgressListener()
+                if(progress < 100)
                 {
-
-                    @Override
-                    public void progressToComplete()
+                    progress++;
+                    mRingProgressBar1.setProgress(progress);
+                    mRingProgressBar2.setProgress(progress);
+                    mRingProgressBar1.setOnProgressListener(new RingProgressBar.OnProgressListener()
                     {
 
-                        Toast.makeText(MainActivity.this, "完成", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                        @Override
+                        public void progressToComplete()
+                        {
+
+                            //Toast.makeText(MainActivity.this, "1完成", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    mRingProgressBar2.setOnProgressListener(new RingProgressBar.OnProgressListener()
+                    {
+
+                        @Override
+                        public void progressToComplete()
+                        {
+
+                            //Toast.makeText(MainActivity.this, "2完成", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+
             }
         }
     };
@@ -47,7 +64,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRingProgressBar = (RingProgressBar) findViewById(R.id.progress_bar);
+        mRingProgressBar1 = (RingProgressBar) findViewById(R.id.progress_bar_1);
+        mRingProgressBar2 = (RingProgressBar) findViewById(R.id.progress_bar_2);
 
         new Thread(new Runnable()
         {

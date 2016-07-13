@@ -12,15 +12,35 @@
 
 
     <io.netopen.hotbitmapgg.library.view.RingProgressBar
-        android:id="@+id/progress_bar"
+        android:id="@+id/progress_bar_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
         app:max="100"
+        android:layout_marginTop="100dp"
         app:ringColor="@color/colorPrimary"
         app:ringProgressColor="@color/colorPrimaryDark"
         app:ringWidth="4dp"
         app:style="FILL"
+        app:textColor="@color/colorPrimary"
+        app:textIsShow="true"
+        app:textSize="16sp" />
+
+
+
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:id="@+id/progress_bar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        app:max="100"
+        app:ringColor="@color/bg_color"
+        app:ringProgressColor="@color/colorPrimaryDark"
+        app:ringWidth="4dp"
+        app:style="STROKE"
         app:textColor="@color/colorPrimary"
         app:textIsShow="true"
         app:textSize="16sp" />
