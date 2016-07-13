@@ -2,6 +2,10 @@
 
 一个简单实现的自定义圆环进度条,可使用于文件的上传下载图片加载等地方.
 
+
+## 截图
+![](https://github.com/HotBitmapGG/StudyProject/blob/studyRank/pic/01.jpg?raw=true)
+
 # 导入项目
  Step 1. Add the JitPack repository to your build file
  Add it in your root build.gradle at the end of repositories:
