@@ -47,18 +47,14 @@ style    | STROKE& FILL   | 圆环进度样式
 
 * 1.在XML中
 
-   android:id="@+id/progress_bar"
-   android:layout_width="wrap_content"
-   android:layout_height="wrap_content"
-   android:layout_centerInParent="true"
-   app:max="100"
-   app:ringColor="@color/colorPrimary"
-   app:ringProgressColor="@color/colorPrimaryDark"
-   app:ringWidth="4dp"
-   app:style="STROKE"
-   app:textColor="@color/colorPrimary"
-   app:textIsShow="true"
-   app:textSize="16sp"
+ *  app:max="100"
+ *  app:ringColor="@color/colorPrimary"
+ *  app:ringProgressColor="@color/colorPrimaryDark"
+ *  app:ringWidth="4dp"
+ *  app:style="STROKE"
+ *  app:textColor="@color/colorPrimary"
+ *  app:textIsShow="true"
+ *  app:textSize="16sp"
 
 * 2.代码中
 
