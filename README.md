@@ -31,19 +31,17 @@ Step 2. Add the dependency
 
 * 自定义属性介绍
 
-    <declare-styleable name="RingProgressBar">
-        <attr name="ringColor" format="color" />
-        <attr name="ringProgressColor" format="color" />
-        <attr name="ringWidth" format="dimension"></attr>
-        <attr name="textColor" format="color" />
-        <attr name="textSize" format="dimension" />
-        <attr name="max" format="integer"></attr>
-        <attr name="textIsShow" format="boolean"></attr>
-        <attr name="style">
-            <enum name="STROKE" value="0"></enum>
-            <enum name="FILL" value="1"></enum>
-        </attr>
-    </declare-styleable>
+name | format | 说明
+-----|------|----
+ringColor    | color    | 圆环颜色
+ringProgressColor   | color     | 进度颜色
+ringWidth    | dimension    | 圆环进度宽度
+textColor   | color   | 文本颜色
+textSize    | dimension    | 文本大小
+max    | integer    | 最大进度值
+textIsShow    | boolean    | 是否显示文本
+style    | STROKE& FILL   | 圆环进度样式
+
 
 ## 用法
 
