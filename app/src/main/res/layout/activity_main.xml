@@ -20,7 +20,7 @@
         app:ringColor="@color/colorPrimary"
         app:ringProgressColor="@color/colorPrimaryDark"
         app:ringWidth="4dp"
-        app:style="FILL"
+        app:style="STROKE"
         app:textColor="@color/colorPrimary"
         app:textIsShow="true"
         app:textSize="16sp" />
