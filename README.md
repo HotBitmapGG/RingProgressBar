@@ -47,6 +47,7 @@ style    | STROKE& FILL   | 圆环进度样式
 
 * 1.在XML中
 
+<root>
        <io.netopen.hotbitmapgg.library.view.RingProgressBar
            android:id="@+id/progress_bar"
            android:layout_width="wrap_content"
@@ -60,6 +61,7 @@ style    | STROKE& FILL   | 圆环进度样式
            app:textColor="@color/colorPrimary"
            app:textIsShow="true"
            app:textSize="16sp" />
+           </root>
 
 * 2.代码中
 
