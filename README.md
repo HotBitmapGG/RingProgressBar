@@ -4,7 +4,9 @@
 
 
 ## 截图
-![](https://github.com/HotBitmapGG/StudyProject/blob/studyRank/pic/01.jpg?raw=true)
+![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/01.jpg?raw=true)
+
+![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/02.jpg?raw=true)
 
 # 导入项目
  Step 1. Add the JitPack repository to your build file
