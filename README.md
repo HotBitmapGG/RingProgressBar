@@ -61,6 +61,7 @@ style    | STROKE& FILL   | 圆环进度样式
 
   //设置进度条的进度值
   mRingProgressBar.setProgress(progress);
+  </p>
   mRingProgressBar.setOnProgressListener(new RingProgressBar.OnProgressListener()
   {
 
