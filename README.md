@@ -23,7 +23,7 @@
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.HotBitmapGG:RingProgressBar:V1.0'
+	        compile 'com.github.HotBitmapGG:RingProgressBar:V1.1'
 	}
 
 ## 使用说明
