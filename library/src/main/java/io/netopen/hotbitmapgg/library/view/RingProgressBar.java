@@ -89,8 +89,10 @@ public class RingProgressBar extends View
 
     private boolean isShowCheck = false;
 
+    // 圆环中心
     private int centre;
 
+    // 圆环半径
     private int radius;
 
     // 是否显示Check动画
@@ -130,7 +132,7 @@ public class RingProgressBar extends View
         ringWidth = mTypedArray.getDimension(R.styleable.RingProgressBar_ringWidth, 5);
         max = mTypedArray.getInteger(R.styleable.RingProgressBar_max, 100);
         textIsShow = mTypedArray.getBoolean(R.styleable.RingProgressBar_textIsShow, true);
-       // checkIsShow = mTypedArray.getBoolean(R.styleable.RingProgressBar_checkIsShow, true);
+        // checkIsShow = mTypedArray.getBoolean(R.styleable.RingProgressBar_checkIsShow, true);
         style = mTypedArray.getInt(R.styleable.RingProgressBar_style, 0);
 
         mTypedArray.recycle();
@@ -143,12 +145,28 @@ public class RingProgressBar extends View
 
         super.onDraw(canvas);
 
-        /** 绘制圆形相关 */
-
-        //圆形的中心点
         centre = getWidth() / 2;
-        //圆形的半径
         radius = (int) (centre - ringWidth / 2);
+
+        //绘制外层圆
+        drawCircle(canvas);
+        //绘制文本内容
+        drawTextContent(canvas);
+        //绘制进度条
+        drawProgress(canvas);
+
+//        if(checkIsShow)
+//        drawLine(canvas);
+    }
+
+
+    /**
+     * 绘制外层圆环
+     *
+     * @param canvas
+     */
+    private void drawCircle(Canvas canvas)
+    {
         //设置画笔颜色
         paint.setColor(ringColor);
         //设置画笔样式
@@ -159,9 +177,15 @@ public class RingProgressBar extends View
         paint.setAntiAlias(true);
         //绘制圆形
         canvas.drawCircle(centre, centre, radius, paint);
+    }
 
-        /** 绘制进度的文字相关 */
-
+    /**
+     * 绘制进度文本
+     *
+     * @param canvas
+     */
+    private void drawTextContent(Canvas canvas)
+    {
         //设置stroke的宽度
         paint.setStrokeWidth(0);
         //设置文字的颜色
@@ -175,13 +199,20 @@ public class RingProgressBar extends View
         //获取文字的宽度 用于绘制文本内容
         float textWidth = paint.measureText(percent + "%");
         //绘制文本 会根据设置的是否显示文本的属性&是否是Stroke的样式进行判断
-        if (textIsShow && percent != 0 && style == STROKE )//&& !isShowCheck
+        if (textIsShow && percent != 0 && style == STROKE)//&& !isShowCheck
         {
             canvas.drawText(percent + "%", centre - textWidth / 2, centre + textSize / 2, paint);
         }
+    }
 
-        /** 绘制进度相关 */
 
+    /**
+     * 绘制进度条
+     *
+     * @param canvas
+     */
+    private void drawProgress(Canvas canvas)
+    {
         //绘制进度 根据设置的样式进行绘制
         paint.setStrokeWidth(ringWidth);
         paint.setColor(ringProgressColor);
@@ -209,11 +240,13 @@ public class RingProgressBar extends View
                 break;
             }
         }
-
-//        if(checkIsShow)
-//        drawLine(canvas);
     }
 
+    /**
+     * 绘制Check对勾动画
+     *
+     * @param canvas
+     */
     private void drawLine(Canvas canvas)
     {
 
@@ -258,7 +291,7 @@ public class RingProgressBar extends View
                 centerX + line2_x,
                 centre + line2_y, paint);
 
-       postInvalidateDelayed(2);
+        postInvalidateDelayed(2);
     }
 
     @Override
@@ -321,7 +354,7 @@ public class RingProgressBar extends View
 
         if (max < 0)
         {
-            throw new IllegalArgumentException("max not less than 0");
+            throw new IllegalArgumentException("The max progress of 0");
         }
         this.max = max;
     }
@@ -347,7 +380,7 @@ public class RingProgressBar extends View
 
         if (progress < 0)
         {
-            throw new IllegalArgumentException("progress not less than 0");
+            throw new IllegalArgumentException("The progress of 0");
         }
         if (progress > max)
         {
