@@ -4,6 +4,9 @@
 
 
 ## 截图
+
+![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/ring.gif?raw=true)
+
 ![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/01.jpg?raw=true)
 
 ![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/02.jpg?raw=true)

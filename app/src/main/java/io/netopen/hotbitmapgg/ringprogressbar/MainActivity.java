@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public void progressToComplete()
                         {
-
-                            //Toast.makeText(MainActivity.this, "1完成", Toast.LENGTH_SHORT).show();
+                            // Here after the completion of the processing
                         }
                     });
 
@@ -47,8 +46,7 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public void progressToComplete()
                         {
-
-                            //Toast.makeText(MainActivity.this, "2完成", Toast.LENGTH_SHORT).show();
+                            // Here after the completion of the processing
                         }
                     });
                 }
