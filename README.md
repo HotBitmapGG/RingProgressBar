@@ -72,6 +72,11 @@ style    | STROKE& FILL   | 圆环进度样式
      }
   });
 
+
+## Tips
+
+ * 增加了完成后一个对勾显示的动画效果,但是不知道这个有没有实际的用途,所以代码中注释掉了,有需要的同学可以打开注释使用.
+
 ## Other
 
  * 知了日报客户端: https://github.com/HotBitmapGG/RxZhiHu
