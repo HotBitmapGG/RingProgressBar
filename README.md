@@ -8,6 +8,7 @@
 ![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/ring.gif?raw=true)
 
 # 导入项目
+ 
  Step 1. Add the JitPack repository to your build file
  Add it in your root build.gradle at the end of repositories:
 
@@ -23,7 +24,7 @@
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.HotBitmapGG:RingProgressBar:V1.1'
+	         compile 'com.github.HotBitmapGG:RingProgressBar:V1.2'
 	}
 
 ## 使用说明
@@ -80,10 +81,19 @@ style    | STROKE& FILL   | 圆环进度样式
 
 ## Other
 
- * 知了日报客户端: https://github.com/HotBitmapGG/RxZhiHu
- * 高仿BiliBili客户端: https://github.com/HotBitmapGG/OhMyBiliBili
- * Gank.IO客户端: https://github.com/HotBitmapGG/StudyProject
- * 妹子福利App: https://github.com/HotBitmapGG/MoeQuest
+  * 知了日报客户端: https://github.com/HotBitmapGG/RxZhiHu
+
+  * 高仿BiliBili客户端: https://github.com/HotBitmapGG/OhMyBiliBili
+
+  * Gank.IO客户端: https://github.com/HotBitmapGG/StudyProject
+
+  * 妹子福利App: https://github.com/HotBitmapGG/MoeQuest
+
+  * 圆环进度条:https://github.com/HotBitmapGG/RingProgressBar
+
+  * 安卓学习代码练习:https://github.com/HotBitmapGG/AndroidEveryDayPractice
+  
+  * 轻量级的RecycleViewAdapter辅助类库 :https://github.com/HotBitmapGG/EasyRecycleAdapterHelper
 
 ## License
 
