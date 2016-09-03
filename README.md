@@ -5,7 +5,10 @@
 
 ## 截图
 
-![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/ring.gif?raw=true)
+![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/03.gif?raw=true)
+
+
+<a href="art/01.jpg"><img src="art/01.jpg" width="40%"/></a> <a href="art/02.jpg"><img src="art/02.jpg" width="40%"/></a>
 
 # 导入项目
  
@@ -91,9 +94,9 @@ style    | STROKE& FILL   | 圆环进度样式
 
   * 圆环进度条:https://github.com/HotBitmapGG/RingProgressBar
 
-  * 安卓学习代码练习:https://github.com/HotBitmapGG/AndroidEveryDayPractice
+  * 仿芝麻信用圆环进度: https://github.com/HotBitmapGG/CreditSesameRingView
   
-  * 轻量级的RecycleViewAdapter辅助类库 :https://github.com/HotBitmapGG/EasyRecycleAdapterHelper
+  * 轻量级的RecycleViewAdapter辅助类库: https://github.com/HotBitmapGG/EasyRecycleAdapterHelper
 
 ## License
 
