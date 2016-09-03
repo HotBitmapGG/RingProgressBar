@@ -5,7 +5,7 @@
 
 ## 截图
 
-![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/pic/03.gif?raw=true)
+![](https://github.com/HotBitmapGG/RingProgressBar/blob/master/art/03.gif?raw=true)
 
 
 <a href="art/01.jpg"><img src="art/01.jpg" width="40%"/></a> <a href="art/02.jpg"><img src="art/02.jpg" width="40%"/></a>
