@@ -1,16 +1,20 @@
 # RingProgressBar
 
-一个简单实现的自定义圆环进度条,可使用于文件的上传下载图片加载等地方.
+[![](https://jitpack.io/v/HotBitmapGG/RingProgressBar.svg)](https://jitpack.io/#HotBitmapGG/RingProgressBar)
+
+A material design circle the progress bar,You can download it in image loading and file upload when used.
 
 
-## 截图
+## Screenshots
 
 <a href="art/03.gif"><img src="art/03.gif" width="40%"/></a>
 
 <a href="art/01.jpg"><img src="art/01.jpg" width="40%"/></a> <a href="art/02.jpg"><img src="art/02.jpg" width="40%"/></a>
 
-# 导入项目
- 
+# Import
+
+```java
+
  Step 1. Add the JitPack repository to your build file
  Add it in your root build.gradle at the end of repositories:
 
@@ -29,57 +33,90 @@ Step 2. Add the dependency
 	         compile 'com.github.HotBitmapGG:RingProgressBar:V1.2.1'
 	}
 
-## 使用说明
+```
 
-* 自定义属性介绍
+## Directions
 
-name | format | 说明
+* custom properties
+
+name | format | instructions
 -----|------|----
-ringColor    | color    | 圆环颜色
-ringProgressColor   | color     | 进度颜色
-ringWidth    | dimension    | 圆环进度宽度
-textColor   | color   | 文本颜色
-textSize    | dimension    | 文本大小
-max    | integer    | 最大进度值
-textIsShow    | boolean    | 是否显示文本
-style    | STROKE& FILL   | 圆环进度样式
+ringColor    | color    | Color ring
+ringProgressColor   | color     | Progress of color
+ringWidth    | dimension    | Ring width of progress
+textColor   | color   | Text color
+textSize    | dimension    | Text size
+max    | integer    | Max progress
+textIsShow    | boolean    | Is display text
+style    | STROKE& FILL   | Circle progress style
 
 
-## 用法
+## Usage
 
-* 1.在XML中
+* 1.In the XML
 
- *  app:max="100"
- *  app:ringColor="@color/colorPrimary"
- *  app:ringProgressColor="@color/colorPrimaryDark"
- *  app:ringWidth="4dp"
- *  app:style="STROKE"
- *  app:textColor="@color/colorPrimary"
- *  app:textIsShow="true"
- *  app:textSize="16sp"
+```java
 
-* 2.代码中
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:id="@+id/progress_bar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        app:max="100"
+        android:layout_marginTop="100dp"
+        app:ringColor="@color/colorPrimary"
+        app:ringProgressColor="@color/colorPrimaryDark"
+        app:ringWidth="3dp"
+        app:style="FILL"
+        app:textColor="@color/colorPrimary"
+        app:textIsShow="true"
+        app:textSize="16sp" />
+
+
+
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:id="@+id/progress_bar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        app:max="100"
+        app:ringColor="@android:color/darker_gray"
+        app:ringProgressColor="@color/colorPrimary"
+        app:ringWidth="3dp"
+        app:style="STROKE"
+        app:textColor="@color/colorPrimary"
+        app:textIsShow="true"
+        app:textSize="16sp" />
+
+```
+
+* 2.In the code
+
+```java
 
   mRingProgressBar = (RingProgressBar) findViewById(R.id.progress_bar);
 
-  //设置进度条的进度值
+  // Set the progress bar's progress
   mRingProgressBar.setProgress(progress);
-  </p>
   mRingProgressBar.setOnProgressListener(new RingProgressBar.OnProgressListener()
   {
 
     @Override
      public void progressToComplete()
      {
-         // 进度达到最大值时回调 默认max进度值为100
-         Toast.makeText(MainActivity.this, "完成", Toast.LENGTH_SHORT).show();
+         // Progress reaches the maximum callback default Max value is 100
+         Toast.makeText(MainActivity.this, "complete", Toast.LENGTH_SHORT).show();
      }
   });
 
+```
 
 ## Tips
 
- * 增加了完成后一个对勾显示的动画效果,但是不知道这个有没有实际的用途,所以代码中注释掉了,有需要的同学可以打开注释使用.
+ * Increased after the completion of a tick to show animation effects, but don't know this have any practical application, so the code commented out, students in need can use open comments.
 
 ## Other
 
