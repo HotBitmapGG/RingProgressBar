@@ -142,19 +142,14 @@ style    | STROKE& FILL   | Circle progress style
 ```
 
 
-## Other
+## About me
 
-  * 知了日报客户端: https://github.com/HotBitmapGG/RxZhiHu
+[![Wercker](https://img.shields.io/badge/weibo-HotBitmapGG-blue.svg)](http://weibo.com/3223089177/profile?topnav=1&wvr=6&is_all=1)
 
-  * 高仿BiliBili客户端: https://github.com/HotBitmapGG/OhMyBiliBili
+An android developer in Wuhan.
 
-  * Gank.io客户端: https://github.com/HotBitmapGG/StudyProject
+If you want to make friends with me, You can focus on my weibo.
 
-  * 妹子福利App: https://github.com/HotBitmapGG/MoeQuest
-
-  * 圆环进度条:https://github.com/HotBitmapGG/RingProgressBar
-
-  * 仿芝麻信用分仪表盘: https://github.com/HotBitmapGG/CreditSesameRingView
 
 ## License
 
