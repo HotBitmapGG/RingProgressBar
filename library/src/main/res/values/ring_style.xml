@@ -8,7 +8,6 @@
         <attr name="textSize" format="dimension" />
         <attr name="max" format="integer" />
         <attr name="textIsShow" format="boolean" />
-        <!--<attr name="checkIsShow" format="boolean" />-->
         <attr name="style">
             <enum name="STROKE" value="0" />
             <enum name="FILL" value="1" />

@@ -75,28 +75,11 @@ public class RingProgressBar extends View
     //进度回调接口
     private OnProgressListener mOnProgressListener;
 
-    //线1的x轴
-    private int line1_x = 0;
-
-    //线1的y轴
-    private int line1_y = 0;
-
-    //线2的x轴
-    private int line2_x = 0;
-
-    //线2的y轴
-    private int line2_y = 0;
-
-    private boolean isShowCheck = false;
-
     // 圆环中心
     private int centre;
 
     // 圆环半径
     private int radius;
-
-    // 是否显示Check动画
-    //private boolean checkIsShow;
 
 
     public RingProgressBar(Context context)
@@ -132,7 +115,6 @@ public class RingProgressBar extends View
         ringWidth = mTypedArray.getDimension(R.styleable.RingProgressBar_ringWidth, 5);
         max = mTypedArray.getInteger(R.styleable.RingProgressBar_max, 100);
         textIsShow = mTypedArray.getBoolean(R.styleable.RingProgressBar_textIsShow, true);
-        // checkIsShow = mTypedArray.getBoolean(R.styleable.RingProgressBar_checkIsShow, true);
         style = mTypedArray.getInt(R.styleable.RingProgressBar_style, 0);
 
         mTypedArray.recycle();
@@ -154,9 +136,6 @@ public class RingProgressBar extends View
         drawTextContent(canvas);
         //绘制进度条
         drawProgress(canvas);
-
-//        if(checkIsShow)
-//        drawLine(canvas);
     }
 
 
@@ -199,7 +178,7 @@ public class RingProgressBar extends View
         //获取文字的宽度 用于绘制文本内容
         float textWidth = paint.measureText(percent + "%");
         //绘制文本 会根据设置的是否显示文本的属性&是否是Stroke的样式进行判断
-        if (textIsShow && percent != 0 && style == STROKE)//&& !isShowCheck
+        if (textIsShow && percent != 0 && style == STROKE)
         {
             canvas.drawText(percent + "%", centre - textWidth / 2, centre + textSize / 2, paint);
         }
@@ -235,64 +214,13 @@ public class RingProgressBar extends View
             {
                 paint.setStyle(Paint.Style.FILL_AND_STROKE);
                 paint.setStrokeCap(Paint.Cap.ROUND);
-                if (progress != 0)//&& !isShowCheck
+                if (progress != 0)
                     canvas.drawArc(fillOval, -90, 360 * progress / max, true, paint);
                 break;
             }
         }
     }
 
-    /**
-     * 绘制Check对勾动画
-     *
-     * @param canvas
-     */
-    private void drawLine(Canvas canvas)
-    {
-
-        if (!isShowCheck)
-            return;
-
-        //绘制对钩的两条线
-        paint.setAntiAlias(true);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(ringWidth);
-        paint.setColor(ringProgressColor);
-
-        if (line1_x < radius / 3)
-        {
-            line1_x++;
-            line1_y++;
-        }
-
-        int centerX = centre - getWidth() / 5;
-
-        //画第一条线
-        canvas.drawLine(centerX, centre,
-                centerX + line1_x,
-                centre + line1_y, paint);
-
-        if (line1_x == radius / 3)
-        {
-            line2_x = line1_x;
-            line2_y = line1_y;
-            line1_x++;
-            line1_y++;
-        }
-
-        if (line1_x > radius / 3 && line2_x <= radius)
-        {
-            line2_x++;
-            line2_y--;
-        }
-
-        canvas.drawLine(centerX + line1_x,
-                centre + line1_y - 1,
-                centerX + line2_x,
-                centre + line2_y, paint);
-
-        postInvalidateDelayed(2);
-    }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
@@ -393,7 +321,6 @@ public class RingProgressBar extends View
         }
         if (progress == max)
         {
-            //isShowCheck = true;
             if (mOnProgressListener != null)
             {
                 mOnProgressListener.progressToComplete();
@@ -407,7 +334,7 @@ public class RingProgressBar extends View
      *
      * @return
      */
-    public int getCricleColor()
+    public int getRingColor()
     {
 
         return ringColor;
@@ -416,12 +343,12 @@ public class RingProgressBar extends View
     /**
      * 设置圆环的颜色
      *
-     * @param cricleColor
+     * @param ringColor
      */
-    public void setCricleColor(int cricleColor)
+    public void setRingColor(int ringColor)
     {
 
-        this.ringColor = cricleColor;
+        this.ringColor = ringColor;
     }
 
     /**
@@ -429,7 +356,7 @@ public class RingProgressBar extends View
      *
      * @return
      */
-    public int getCricleProgressColor()
+    public int getRingProgressColor()
     {
 
         return ringProgressColor;
@@ -438,12 +365,12 @@ public class RingProgressBar extends View
     /**
      * 设置圆环进度的颜色
      *
-     * @param cricleProgressColor
+     * @param ringProgressColor
      */
-    public void setCricleProgressColor(int cricleProgressColor)
+    public void setRingProgressColor(int ringProgressColor)
     {
 
-        this.ringProgressColor = cricleProgressColor;
+        this.ringProgressColor = ringProgressColor;
     }
 
     /**
@@ -526,6 +453,10 @@ public class RingProgressBar extends View
         return (int) (dp * density + 0.5f);
     }
 
+
+    /**
+     * 进度完成回调接口
+     */
     public interface OnProgressListener
     {
 

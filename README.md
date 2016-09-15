@@ -114,9 +114,6 @@ style    | STROKE& FILL   | Circle progress style
 
 ```
 
-## Tips
-
- * Increased after the completion of a tick to show animation effects, but don't know this have any practical application, so the code commented out, students in need can use open comments.
 
 ## Other
 
