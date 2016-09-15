@@ -1,5 +1,6 @@
 # RingProgressBar
 
+
 [![](https://jitpack.io/v/HotBitmapGG/RingProgressBar.svg)](https://jitpack.io/#HotBitmapGG/RingProgressBar) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RingProgressBar-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4326) [![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg?maxAge=2592000?style=plastic)]()  [![Wercker](https://img.shields.io/badge/Gradle-2.1.3-brightgreen.svg)]() [![David](https://img.shields.io/david/strongloop/express.svg?maxAge=2592000?style=plastic)]() [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000?style=plastic)]()
 
 A material design circle the progress bar,You can download it in image loading and file upload when used.
@@ -11,7 +12,7 @@ A material design circle the progress bar,You can download it in image loading a
 
 <a href="art/01.jpg"><img src="art/01.jpg" width="40%"/></a> <a href="art/02.jpg"><img src="art/02.jpg" width="40%"/></a>
 
-# Import
+## Import
 
 ```java
 
@@ -30,10 +31,36 @@ A material design circle the progress bar,You can download it in image loading a
 Step 2. Add the dependency
 
 	dependencies {
-	         compile 'com.github.HotBitmapGG:RingProgressBar:V1.2.1'
+	         compile 'com.github.HotBitmapGG:RingProgressBar:V1.2.2'
 	}
 
 ```
+
+## Maven
+
+```java
+Step 1.
+
+<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+
+
+
+Step 2. Add the dependency
+
+	<dependency>
+	    <groupId>com.github.HotBitmapGG</groupId>
+	    <artifactId>RingProgressBar</artifactId>
+	    <version>V1.2.2</version>
+	</dependency>
+
+```
+
 
 ## Directions
 
