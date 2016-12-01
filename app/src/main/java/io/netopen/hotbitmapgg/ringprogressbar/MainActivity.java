@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity
         mRingProgressBar1 = (RingProgressBar) findViewById(R.id.progress_bar_1);
         mRingProgressBar2 = (RingProgressBar) findViewById(R.id.progress_bar_2);
 
+        
         new Thread(new Runnable()
         {
 
