@@ -1,7 +1,7 @@
 # RingProgressBar
 
 
-[![](https://jitpack.io/v/HotBitmapGG/RingProgressBar.svg)](https://jitpack.io/#HotBitmapGG/RingProgressBar) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RingProgressBar-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4326) [![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg?maxAge=2592000?style=plastic)]()  [![Wercker](https://img.shields.io/badge/Gradle-2.1.3-brightgreen.svg)]() [![David](https://img.shields.io/david/strongloop/express.svg?maxAge=2592000?style=plastic)]() [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000?style=plastic)]()
+[![](https://jitpack.io/v/HotBitmapGG/RingProgressBar.svg)](https://jitpack.io/#HotBitmapGG/RingProgressBar) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RingProgressBar-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4326) [![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg?maxAge=2592000?style=plastic)]() [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000?style=plastic)]()
 
 A material design circle the progress bar,You can download it in image loading and file upload when used.
 
