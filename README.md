@@ -31,7 +31,7 @@ A material design circle the progress bar,You can download it in image loading a
 Step 2. Add the dependency
 
 	dependencies {
-	         compile 'com.github.HotBitmapGG:RingProgressBar:V1.2.2'
+	        compile 'com.github.HotBitmapGG:RingProgressBar:V1.2.3'
 	}
 
 ```
