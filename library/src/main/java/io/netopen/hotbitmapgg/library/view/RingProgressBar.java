@@ -1,7 +1,5 @@
 package io.netopen.hotbitmapgg.library.view;
 
-import io.netopen.hotbitmapgg.library.R;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,6 +10,8 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
+
+import io.netopen.hotbitmapgg.library.R;
 
 /**
  * Created by hcc on 16/7/13 19:54
@@ -35,7 +35,7 @@ public class RingProgressBar extends View {
   private int result = 0;
 
   //默认padding值
-  private int padding = 0;
+  private float padding = 0;
 
   //圆环的颜色
   private int ringColor;
@@ -114,6 +114,8 @@ public class RingProgressBar extends View {
     max = mTypedArray.getInteger(R.styleable.RingProgressBar_max, 100);
     textIsShow = mTypedArray.getBoolean(R.styleable.RingProgressBar_textIsShow, true);
     style = mTypedArray.getInt(R.styleable.RingProgressBar_style, 0);
+    progress = mTypedArray.getInteger(R.styleable.RingProgressBar_progress, 0);
+    padding = mTypedArray.getDimension(R.styleable.RingProgressBar_ringPadding, 5);
 
     mTypedArray.recycle();
   }
@@ -248,8 +250,6 @@ public class RingProgressBar extends View {
     //确定View的宽高
     width = w;
     height = h;
-    //初始化padding值 默认设置为5
-    padding = dp2px(5);
   }
 
 
