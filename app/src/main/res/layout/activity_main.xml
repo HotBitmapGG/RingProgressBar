@@ -23,6 +23,7 @@
         app:ringProgressColor="@color/colorPrimaryDark"
         app:ringWidth="3dp"
         app:style="FILL"
+        app:progress="35"
         app:textColor="@color/colorPrimary"
         app:textIsShow="true"
         app:textSize="16sp" />
@@ -37,6 +38,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="100dp"
         app:max="100"
+        app:progress="50"
         app:ringColor="@android:color/darker_gray"
         app:ringProgressColor="@color/colorPrimary"
         app:ringWidth="3dp"
